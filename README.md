@@ -36,7 +36,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true, null: false, index: true|
-|group_id|references|foreign_key: true, null: fals, index: true|
+|group_id|references|foreign_key: true, null: false, index: true|
 
 ### Association
 - belongs_to :user
