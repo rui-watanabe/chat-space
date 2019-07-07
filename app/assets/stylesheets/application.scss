@@ -1,14 +1,15 @@
-@import "./reset";
 @import "font-awesome";
-@import "config/variable.scss";
-@import "modules/chat.scss";
-@import "modules/user";
-@import "modules/chat-side.scss";
-@import "modules/chat-main.scss";
+@import "config/colors";
+@import "config/font-size";
+@import "config/reset";
+@import "mixins/mixin";
+@import "mixins/vendor_prefix";
+@import "modules/chat";
 @import "modules/flash";
-
-
-
+@import "modules/side_bar";
+@import "modules/user";
+@import "modules/group";
+@import "messages/messages.scss"
 
 // /*
 //  * This is a manifest file that'll be compiled into application.css, which will include all the files

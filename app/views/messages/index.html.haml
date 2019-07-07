@@ -1,39 +1,56 @@
 .wrapper
-  .chat-side
-    .side-header
-      .side-header__box
-        %p.side-header__box__user-name
-          = current_user.name
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-          =link_to "#" do
-            = fa_icon 'edit', class: "side-header__box__menu__new-group__icon"
-          %li.side-header__box__menu__edit-user
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: "side-header__box__menu__edit-user__icon"
-    .groups
-      =render "groups"
 
-  .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group
-          test-group
-        %ul.main-header__left-box__member-list
-          %li.main-header__left-box__member-list__member
-      =link_to '#', class: "main-header__edit-link" do
-        = "Edit"
-        .main-header__edit-btn
+  = render 'devise/shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
     .messages
       .message
-        .message__upper-info
-        = render "messages"
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
     .form
-      %form.new_message
-        .input-box
-          %input.input-box__text
-          %label.input-box__image
-            = fa_icon 'image', class: "input-box__image__icon"
-            %input.message-btn{type: "file"}
-        .submit-botton
-          Send
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
