@@ -40,20 +40,26 @@
       }
     }
     .right-header {
-      border: 1px solid $light_blue;
       color: $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      &__button {
-        color: $light_blue;
-        text-decoration: none;
-      }
+    }
+    .edit-link{
+      color: $light_blue;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $light_blue;
+      color: $light_blue;
+      position: absolute;
+      right: 40px;
+      text-decoration: none;
     }
   }
-
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
